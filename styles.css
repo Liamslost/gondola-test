@@ -7,7 +7,8 @@ body{
   .progressContainer {
     height:400px;
     margin: 0 auto;
-    padding: 0 50px 0 50px;
+    padding-top: 100px;
+    /* padding: 0 50px 0 50px; */
     width: 90%;
     display: flex;
     justify-content: center;
@@ -16,7 +17,7 @@ body{
 .cable{
     background-color: black;
     position: relative;
-    top:15%;
+    top:100px;
     height: 10px;
     width: 100%;
   }
