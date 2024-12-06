@@ -1,0 +1,114 @@
+body{
+    background-color: #233831;
+    padding: 0;
+    margin: 0;
+}
+ 
+  .progressContainer {
+    height:400px;
+    margin: 0 auto;
+    padding: 0 50px 0 50px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+  }
+
+.cable{
+    background-color: black;
+    position: relative;
+    top:15%;
+    height: 10px;
+    width: 100%;
+  }
+  
+  .flipper-card{
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    perspective: 1000px;
+  }
+  
+  .flipper-card-inner{
+    position: relative;
+    width: 250px;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    transform-origin: middle middle;
+  
+  }
+  
+  .flipper-card:hover .flipper-card-inner{
+    transform: rotateY(180deg);
+    transform-origin: center center;
+  }
+  
+  .flip-card-front, .flip-card-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  
+  }
+  
+  .flip-card-front{
+    border-radius: 30px;
+    position: absolute;
+    margin-top: 60px;
+    margin-right: 150px;
+    top:-30px;
+    height: 250px;
+    width: 250px;
+    transform-origin: top;
+    animation: rock 3s ease-in-out infinite;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .flip-card-back{
+    transform: rotateY(180deg);
+    position: absolute;
+    margin-top: 60px;
+    margin-right: 150px;
+    top:-30px;
+    height: 250px;
+    width: 250px;
+    transform-origin: middle;
+  h3{
+    position: relative;
+    top: 0 ;
+  }
+  
+  }
+  
+  @keyframes rock {
+    0%, 100%{
+      transform: rotate(-5deg);
+    }
+    30%{
+      transform: rotate(10deg);
+    }
+  }
+  
+  .hook{
+    background-color: grey;
+    height:50px;
+    width: 15px;
+    position: absolute;
+    transform-origin: center;
+    top: -20%;
+    left:119px;
+  }
+  
+  .hook:after{
+    content: '';
+    position: absolute;
+    background-color: rgb(36, 36, 36);
+    border: solid 4px black;
+    height: 40px;
+    width: 40px;
+    right: -16px;
+    top:-30px;
+    border-radius: 50%;
+  }
